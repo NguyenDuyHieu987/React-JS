@@ -1,0 +1,210 @@
+/* right side content  */
+
+.filter-day {
+  display: flex;
+  list-style-type: none;
+  margin: 18px 0px 20px 0px;
+}
+
+.filter-day li + li {
+  margin-left: 5px;
+}
+
+/* 
+.filter-day li.tab a {
+    text-decoration: none;
+    color: white;
+    white-space: nowrap;
+    font-size: 15px;
+    padding: 10px 15px;
+    background-color: rgb(24, 60, 77);
+    transition: all 0.25s ease;
+} */
+
+.filter-day li.tab:not(.active) a:hover {
+  //   background-color: #0a1e27;
+  background-color: #2c2c2c;
+}
+
+.filter-day li.tab:not(.active) a:hover:after {
+  //   border-left: 17px solid #0a1e27 !important;
+  border-left: 17px solid #2c2c2c !important;
+
+  transition: all 0.25s ease;
+}
+
+.filter-day li.tab.active a {
+  background-image: linear-gradient(to right, #c9003c, #d4bf00);
+}
+
+.filter-day li.tab.active a:after {
+  border-left: 17px solid #d4bf00;
+}
+
+.filter-day li.tab {
+  position: relative;
+}
+
+.filter-day li.tab a {
+  position: relative;
+  display: block;
+  padding: 7px 7px 5px 27px;
+  height: 34px;
+  font-size: 15px;
+  text-decoration: none;
+  white-space: nowrap;
+  color: white;
+  //   background-color: #183c4d;
+  background-color: black;
+
+  transition: all 0.25s ease;
+}
+
+.filter-day li.tab a::after {
+  content: '';
+  position: absolute;
+  border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent;
+  //   border-left: 17px solid #183c4d;
+  border-left: 17px solid black;
+
+  right: -17px;
+  top: 0;
+  z-index: 1;
+}
+
+.filter-day li.tab a::before {
+  content: '';
+  position: absolute;
+  border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent;
+  border-left: 17px solid black;
+  left: 0;
+  top: 0;
+}
+
+.filter-day li:first-child a {
+  padding-left: 10px;
+}
+
+.filter-day li:first-child a::before {
+  display: none;
+}
+
+.rank .rank-side-content {
+  width: 29%;
+  min-width: 332px;
+  transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 1100px) {
+  .filter-day li.tab a {
+    font-size: 15px;
+    /* padding: 10px 10px; */
+    padding: 7px 1px 5px 20px;
+  }
+  .filter-day li:first-child a {
+    padding-left: 5px;
+  }
+  .rank .rank-side-content {
+    min-width: 282px;
+  }
+  .rightside-movies .tab-content {
+    width: 262px !important;
+  }
+}
+
+.rank-side-content.rank {
+  width: 29%;
+  min-width: 332px;
+  transition: all 0.3s ease;
+}
+
+.rank-side-content .rightside-movies {
+  padding: 10px;
+  //   background-color: #091724;
+  background-color: black;
+  border: 0.5px solid #ff3d7480;
+}
+
+.rank .rank-side-content .rightside-movies-container {
+  margin-top: 10px;
+}
+
+.rank-side-content .main-movies-title {
+  display: flex;
+  align-items: center;
+}
+
+.rank-side-content .main-movies-title .fa-star {
+  font-size: 27px;
+  color: rgb(226, 34, 0);
+  margin-right: 10px;
+  margin-bottom: 2px;
+  transform: rotate(15deg);
+}
+
+.rightside-movies .tab-content {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  width: 312px;
+  transition: all 0.3s ease;
+}
+.rank-side-content:not(.rank) .rightside-movies-container.day,
+.rank-side-content:not(.rank) .rightside-movies-container.week,
+.rank-side-content:not(.rank) .rightside-movies-container.month,
+.rank-side-content:not(.rank) .rightside-movies-container.all {
+  max-height: 650px;
+  overflow-y: scroll;
+}
+
+.rank-side-content.rank .rightside-movies-container.day,
+.rank-side-content.rank .rightside-movies-container.week,
+.rank-side-content.rank .rightside-movies-container.month,
+.rank-side-content.rank .rightside-movies-container.all {
+  max-height: 1250px;
+  overflow-y: scroll;
+}
+.rightside-movies-container.day,
+.rightside-movies-container.week,
+.rightside-movies-container.month,
+.rightside-movies-container.all {
+  /* display: none; */
+  width: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.rightside-movies-container.day.active,
+.rightside-movies-container.week.active,
+.rightside-movies-container.month.active,
+.rightside-movies-container.all.active {
+  //   display: block;
+  width: 100%;
+  transition: all 0.3s ease;
+  opacity: 1;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 670px) {
+  .rank {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    column-gap: 10px;
+    margin-top: 20px;
+  }
+  .rank-side-content.rank {
+    width: 100%;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .rightside-movies .tab-content {
+    width: 100% !important;
+  }
+  .filter-day li.tab a {
+    padding: 7px 7px 5px 27px;
+  }
+}

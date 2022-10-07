@@ -1,0 +1,101 @@
+.following-main-content {
+  width: 71%;
+  background: none;
+}
+
+.following-main-content {
+  display: block;
+  position: relative;
+}
+
+.following-main-content .main-movies-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-movies-update {
+  display: block;
+  position: relative;
+  margin-top: 20px;
+}
+
+.main-movies-title,
+.trailer-content-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-size: 20px;
+  padding: 5px 0px;
+}
+
+.main-movies-title strong,
+.trailer-content-title strong {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to right, rgb(85, 2, 19), rgb(255, 0, 0));
+}
+
+.main-movies-title:before,
+.trailer-content-title:before {
+  content: '';
+  position: absolute;
+  height: 1.5px;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgb(58, 2, 13),
+    rgb(255, 0, 0),
+    rgb(58, 2, 13)
+  );
+  left: 0;
+  bottom: 0;
+}
+
+/* main movies container */
+
+/* new movies theater */
+
+.new-movies-update .main-movies-container,
+.new-movie-theater .main-movies-container {
+  margin: 0px -10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+  margin-top: 10px;
+  gap: 10px;
+  // background-color: #091724;
+  background-color: black;
+}
+
+// ------------------------
+.view-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px;
+  background: linear-gradient(to right, #c9003c, #d4bf00);
+  border-radius: 25px;
+}
+
+.view-all > a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 25px;
+  white-space: nowrap;
+  background-color: #091724;
+  font-size: 14px;
+  transition: all 0.5s ease-in-out;
+}
+
+.view-all:hover {
+  background: linear-gradient(to right, #00ffbf, #005485);
+}
+
+.view-all:hover a {
+  color: #11e4af;
+}

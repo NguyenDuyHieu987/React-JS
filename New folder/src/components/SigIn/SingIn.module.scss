@@ -1,0 +1,272 @@
+/* form Sign In, form Sign Up  */
+
+.model-sign {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1111;
+  background: rgba(0, 0, 0, 0.7);
+  animation: fade-sign 0.5s;
+}
+
+.form-sign {
+  display: block;
+  position: fixed;
+  margin: 0px auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1111;
+  width: 600px;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.8),
+    rgba(17, 39, 51, 0.8),
+    rgba(0, 0, 0, 0.8)
+  );
+  // box-shadow: 0px 0px 24px 3px rgb(0 231 255);
+  box-shadow: 0px 0px 24px 3px rgb(19, 103, 116);
+}
+
+@media only screen and (max-height: 550px) {
+  .form-sign {
+    top: 0;
+    left: 0;
+    transform: translate(0);
+    position: relative !important;
+    margin: 20px auto 50px auto !important;
+  }
+  .model-sign {
+    overflow-y: scroll;
+  }
+}
+
+.model-sign,
+.form-sign {
+  display: none;
+  color: white;
+}
+
+.model-sign.active,
+.form-sign.active {
+  display: block;
+}
+
+.signIn-content,
+.signUp-content {
+  display: none;
+}
+
+.signIn-content.active,
+.signUp-content.active {
+  display: block;
+}
+
+@keyframes fade-sign {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    /* top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); */
+  }
+}
+
+.form-sign .fa-xmark {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 27px;
+  color: rgb(226, 0, 0);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-sign .fa-xmark:hover {
+  color: white;
+}
+
+.form-sign a {
+  text-decoration: none;
+  color: rgb(226, 0, 0);
+  font-weight: bold;
+}
+
+.form-sign-body {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px 100px;
+  height: 100%;
+  width: 100%;
+}
+
+.signIn-content,
+.signUp-content {
+  width: 100%;
+}
+
+.form-sign-body .form-input {
+  margin: 15px 0px;
+}
+
+.form-sign-body input {
+  user-select: none;
+}
+
+.form-sign-body i,
+.form-sign-body svg {
+  color: white;
+  cursor: pointer;
+}
+
+.form-sign-body h2 {
+  font-size: 36px;
+  text-align: center;
+  color: rgb(226, 0, 0);
+  margin-bottom: 30px;
+}
+
+.form-sign-body label {
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.form-sign-body .sign-wrapper {
+  border: 1px solid rgb(175, 175, 175);
+  margin: 3px 0px;
+  display: flex;
+}
+
+.form-input .sign-wrapper.error {
+  border: 1px solid rgb(250, 0, 0);
+}
+
+.form-message {
+  display: none;
+}
+
+.form-input .sign-wrapper.error + .form-message {
+  display: inline;
+  color: rgb(250, 0, 0);
+}
+
+.form-sign-body .submit-sign {
+  padding: 10px 10px;
+  width: 100%;
+  background-color: #05132c;
+  border: 1px solid rgb(175, 175, 175, 0.7);
+  margin-top: 30px;
+  color: #c9c9c9;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.group-input-email-signin,
+.group-input-password-signin,
+.group-input-username,
+.group-input-email-signup,
+.group-input-password-signup,
+.group-retype-input-password-signup {
+  border: none;
+  outline: none;
+  background: none;
+  height: 40px;
+  flex-grow: 1;
+  padding: 0px 10px 0px 5px;
+}
+
+.form-sign-body .sign-wrapper:hover {
+  border: 1px solid rgb(0, 64, 143);
+}
+
+.form-sign-body .fa-lock,
+.form-sign-body .fa-at,
+.form-sign-body .fa-user {
+  padding-top: 11px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.form-sign-body .fa-eye,
+.form-sign-body .fa-eye-slash {
+  // padding: 11px 10px;
+}
+
+.form-sign-body .submit-sign:hover {
+  background-color: #002a5e;
+  color: #14d3c3;
+  transition: all 0.3s ease;
+}
+
+.sign-facebook p:hover {
+  background-color: #002149;
+  color: #1770dd;
+  transition: all 0.3s ease;
+}
+
+.sign-google p:hover {
+  background-color: #360505;
+  color: #fa004b;
+  transition: all 0.3s ease;
+}
+
+.notity-sign {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.notity-sign span {
+  cursor: pointer;
+  color: #fa004b;
+  font-weight: bold;
+}
+
+.notity-sign span:hover {
+  color: #00fc7e;
+}
+
+.sign-google,
+.sign-facebook {
+  display: flex;
+}
+
+.sign-facebook p {
+  padding: 10px;
+  width: 100%;
+  background-color: rgb(0, 64, 143);
+  border: 1px solid rgb(175, 175, 175, 0.7);
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  flex-grow: 1;
+  color: white;
+  font-weight: normal;
+  text-align: center;
+}
+
+.sign-facebook p .fa-facebook-f,
+.sign-google p .fa-google {
+  float: left;
+  margin-top: 2px;
+}
+
+.sign-google p {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(167, 0, 0);
+  border: 1px solid rgb(175, 175, 175, 0.7);
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  flex-grow: 1;
+  color: white;
+  font-weight: normal;
+  text-align: center;
+}

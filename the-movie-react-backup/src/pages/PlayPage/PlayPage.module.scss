@@ -1,0 +1,282 @@
+.background-movie-light-off {
+  display: none;
+}
+
+.background-movie-light-off.active {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  z-index: 98;
+}
+
+.player-movie-widget {
+  position: relative;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #091724;
+  z-index: 111;
+}
+
+.player-movie-widget-wrapper {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.swap-server {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 20px;
+  padding: 3px 15px 8px 15px;
+  background-color: #00233a;
+}
+
+.swap-server span {
+  display: block;
+  margin-top: 5px;
+  padding: 7px 15px;
+  background-color: #000d16;
+  color: white;
+}
+
+.swap-server .server-list {
+  overflow: hidden;
+  list-style-type: none;
+  margin-left: 15px;
+}
+
+.swap-server .server-list li {
+  float: left;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.swap-server .server-list li a {
+  white-space: nowrap;
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 8px 15px;
+  background-color: #001727;
+  border: 1px solid rgb(71, 71, 71);
+  transition: all 0.25s ease;
+}
+
+.server-list .server.active a {
+  background-color: #eb3349;
+}
+
+.swap-server .server-list .server:not(.active) a:hover {
+  color: #eb3349;
+  background-color: #000000;
+  transition: 0s;
+}
+
+.player-movie-widget-wrapper .tools {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  list-style-type: none;
+}
+
+.player-movie-widget-wrapper span {
+  color: white;
+}
+
+.player-movie-widget-wrapper .tools li {
+  display: flex;
+  user-select: none;
+  margin-left: 15px;
+  align-items: center;
+  line-height: 30px;
+}
+
+.toggle-light span {
+  white-space: nowrap;
+}
+
+.btn-toggle-light {
+  margin-left: 5px;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  background-color: rgb(65, 65, 65);
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-toggle-light.active {
+  background-color: #eb3349;
+}
+
+.autoNext-episode span {
+  white-space: nowrap;
+}
+
+.btn-autoNetx-episode {
+  position: relative;
+  height: 30px;
+  width: 66px;
+  padding: 0px 2px;
+  margin-left: 5px;
+  border-radius: 20px;
+  background-color: rgb(65, 65, 65);
+}
+
+.btn-autoNetx-episode::before {
+  content: 'On';
+  position: absolute;
+  line-height: 30px;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-autoNetx-episode::after {
+  content: 'Off';
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  text-align: center;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-autoNetx-episode.active {
+  background-color: #eb3349;
+}
+
+.btn-autoNetx-episode.active::before {
+  content: 'Off';
+  transform: translate(-33px, -50%);
+}
+
+.btn-autoNetx-episode.active::after {
+  content: 'On';
+  transform: translate(37px, -50%);
+  color: #eb3349;
+}
+
+.download-movie {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 15px 0px;
+  color: white;
+}
+
+.download-movie h3 {
+  margin-left: 5px;
+}
+
+.download-movie .download-list {
+  list-style-type: none;
+  overflow: hidden;
+  margin-left: 15px;
+  padding: 3px 15px 8px 15px;
+  background-color: #00233a;
+}
+
+.download-movie .download-list li:first-child {
+  margin-left: 0px;
+}
+
+.download-movie .download-list li {
+  float: left;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.download-movie .download-list li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 10px 25px;
+  background-color: rgb(0, 10, 29);
+  transition: all 0.25s ease;
+}
+
+.download-movie .download-list li a:hover {
+  background-color: #eb3349;
+}
+
+.movie-summary {
+  position: relative;
+  margin-top: 10px;
+  padding: 10px;
+  color: white;
+  background-color: #091724;
+}
+
+.movie-summary .rate-movie {
+  display: flex;
+}
+
+.movie-summary .rate-movie h3 {
+  color: #eb3349;
+  margin-right: 10px;
+}
+
+.rate-movie span {
+  margin-top: 2px;
+}
+
+.follow-movie {
+  user-select: none;
+  cursor: pointer;
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  padding: 9px 30px;
+  background-color: #168fad;
+  &:hover {
+    background-color: #00a8a0;
+  }
+  i {
+    margin-right: 5px;
+  }
+}
+
+.follow-movie.active {
+  background-color: #00974c;
+}
+
+.movie-summary-content {
+  margin-top: 20px;
+}
+
+.movie-summary-content h2 {
+  color: #dfbd00;
+  margin-bottom: 5px;
+}
+
+.movie-summary-content > p {
+  line-height: 1.5;
+}
+
+.movie-summary-content a {
+  color: #eb3349;
+  text-decoration: none;
+}

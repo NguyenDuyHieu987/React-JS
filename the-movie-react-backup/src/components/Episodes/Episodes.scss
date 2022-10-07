@@ -1,0 +1,63 @@
+.episodes {
+  margin-top: 20px;
+  color: #fff;
+}
+.list-seasons-episodes {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.episodes .title-list-episodes + select {
+  font-size: 16px;
+  color: #c9c9c9;
+  border: 1px solid #00a7ba;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #001625;
+  margin-left: 20px;
+}
+
+.episodes-wrapper {
+  background-color: #00233a;
+  padding: 3px 15px 8px 15px;
+}
+
+.episodes-list {
+  list-style: none;
+  overflow-y: scroll;
+  max-height: 200px;
+}
+
+.episodes-list li.episode {
+  float: left;
+}
+
+.episodes-list li {
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.episodes-list li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  white-space: nowrap;
+  padding: 5px 13px;
+  background-color: #091724;
+  transition: all 0.25s ease;
+  min-width: 53px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.episodes-list .episode.active a {
+  background-color: #eb3349;
+}
+
+.episodes-list .episode:not(.active) a:hover {
+  color: #eb3349;
+  background-color: #000000;
+  transition: 0s;
+}

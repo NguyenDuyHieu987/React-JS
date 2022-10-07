@@ -1,0 +1,32 @@
+.lastest-episodes {
+  margin-top: 10px;
+}
+
+.lastest-episodes ul {
+  padding: 5px;
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #00233a;
+}
+
+.lastest-episodes ul li {
+  float: left;
+  margin: 3px;
+}
+
+.lastest-episodes a {
+  text-align: center;
+  display: inline-block;
+  user-select: none;
+  text-decoration: none;
+  color: white;
+  background-color: #001125;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.lastest-episodes a:hover {
+  background-color: #070707;
+  color: #eb3349;
+}

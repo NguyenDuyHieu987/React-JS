@@ -1,0 +1,227 @@
+.rightside-box-movie.top1 {
+  height: 170px;
+  width: 100%;
+  position: relative;
+}
+
+.rightside-info-movie {
+  width: 100%;
+}
+
+.rightside-box-movie.top1 .rightside-info-movie {
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+}
+
+.rightside-box-movie.top1 .rightside-info-movie p {
+  width: 75%;
+  font-size: 16px;
+}
+
+.rightside-box-movie.top1 .rightside-info-movie p + p {
+  width: 50%;
+  font-size: 14px;
+}
+
+.rightside-box-movie.top1 .total-views {
+  position: absolute;
+  bottom: 20px;
+  right: 25px;
+  font-size: 12px;
+  color: #94bde0;
+  z-index: 1;
+}
+
+.rightside-box-movie {
+  height: 120px;
+  width: 100%;
+  padding: 10px;
+  position: relative;
+}
+
+.rightside-box-movie:not(.top1) .total-views {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 12px;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+  color: rgb(148, 189, 224);
+}
+
+.rightside-thumbnail {
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  z-index: 1;
+}
+
+.rightside-box-img {
+  min-height: 100px;
+}
+
+.rightside-thumbnail:hover .rightside-box-img img {
+  transform: scale(1.2);
+}
+
+.rightside-box-movie.top1 .rightside-thumbnail:hover .rightside-box-img img {
+  opacity: 0.5;
+}
+
+.rightside-thumbnail:hover .rightside-box-img::after {
+  display: block;
+}
+
+.rightside-box-movie::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  //   background-color: #000414;
+  background-color: #000000;
+  transition: all 0.2s ease-in-out;
+}
+
+.rightside-box-movie::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  //   background-color: #000414;
+  background-color: #000000;
+  transition: all 0.2s ease-in-out;
+}
+
+.rightside-box-movie:hover::before {
+  width: 50%;
+}
+
+.rightside-box-movie:hover::after {
+  width: 50%;
+}
+
+.rightside-box-movie:nth-child(odd) {
+  //   background-image: linear-gradient(90deg, #003236, #010718);
+  background-image: linear-gradient(90deg, #000000, #001d1f);
+}
+
+.rightside-box-movie:nth-child(even) {
+  //   background-image: linear-gradient(90deg, #002022, #000213);
+  background-image: linear-gradient(90deg, #00373b, #2e0415);
+}
+
+.rightside-box-movie.top1 .rightside-box-img,
+.rightside-box-movie.top1 .rightside-box-img span {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.rightside-box-movie.top1 .rightside-box-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.rightside-box-movie .rightside-info-movie {
+  position: relative;
+  z-index: 1;
+  padding-left: 10px;
+  width: calc(100% - 90px);
+  font-size: 14px;
+}
+
+.rightside-info-movie p {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+}
+
+.rightside-info-movie p + p {
+  color: rgb(168, 168, 168);
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+}
+
+.rightside-box-movie .rightside-box-img {
+  height: 100%;
+  width: 90px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.rightside-box-movie .rightside-box-img::after {
+  content: '';
+  position: absolute;
+  display: none;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.rightside-box-movie .rightside-box-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.rightside-box-movie.top1 .txt-rank {
+  position: absolute;
+  font-size: 18px;
+  right: 20px;
+  top: 15px;
+  z-index: 1;
+}
+
+.rightside-box-movie .txt-rank {
+  position: absolute;
+  font-size: 18px;
+  right: 10px;
+  bottom: 5px;
+  z-index: 1;
+}
+
+// ------Remove history
+
+.rightside-box-movie .remove-history,
+.rightside-box-movie .remove-follow {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-30%);
+  font-size: 16px;
+  color: #00757e;
+  font-weight: bold;
+  transition: all 0.25s ease;
+  z-index: 2;
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+}
+
+.remove-history:hover,
+.remove-follow:hover {
+  color: #cc0000;
+}

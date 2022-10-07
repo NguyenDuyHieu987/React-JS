@@ -1,0 +1,257 @@
+.footer {
+  // background-color: #000811;
+  background-color: black;
+  color: white;
+  box-shadow: 0 -6px 14px #000000;
+}
+
+.footer img {
+  user-select: none;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer > .footer-container {
+  padding: 30px 10px 30px 10px;
+  position: relative;
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .footer-container .banner-logo {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.banner-logo .logo {
+  margin: auto 0px auto 15px;
+}
+
+.about-website {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding-right: 20px;
+}
+
+.about-website .introduce-support {
+  display: flex;
+}
+
+.about-website .feedback {
+  margin-top: 15px;
+}
+
+.about-website .feedback p {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(192, 192, 192);
+}
+
+.about-website .feedback .btn-feedback {
+  color: rgb(179, 68, 16);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.about-website .feedback .btn-feedback:hover {
+  color: #eb3349;
+}
+
+.about-website .feedback span {
+  display: block;
+  margin-top: 7px;
+}
+
+.introduce-website,
+.support-website {
+  max-width: 40%;
+}
+
+.footer h3 {
+  color: rgb(230, 88, 18);
+}
+
+.support-website {
+  max-width: 45%;
+  margin-left: 50px;
+}
+
+.footer .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer .social-media,
+.footer .contact-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer .social-media h2,
+.footer .contact-me h2 {
+  color: rgb(230, 88, 18);
+  font-size: 25px;
+  white-space: nowrap;
+}
+
+.social-media .social-contact {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.social-contact a {
+  display: flex;
+  align-items: center;
+}
+
+.social-contact > a:hover {
+  color: rgb(0, 93, 199);
+}
+
+.social-contact > a + a:hover {
+  color: rgb(199, 0, 83);
+}
+
+.social-contact > a + a + a:hover {
+  color: rgb(0, 247, 255);
+}
+
+.social-contact a + a {
+  margin-top: 15px;
+}
+
+.social-contact a img {
+  margin-right: 20px;
+}
+
+.footer .contact-me {
+  margin-top: 15px;
+}
+
+.footer .contact-me .contact-items a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-me .phone-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.footer .contact-me a {
+  margin-top: 10px;
+}
+
+.footer .contact-me img {
+  margin-right: 20px;
+}
+
+.contact-me .gmail-address:hover p {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 136, 0),
+    rgb(0, 132, 255),
+    rgb(0, 185, 0)
+  );
+}
+
+.copyright {
+  background-color: rgb(0, 6, 12);
+}
+
+.copyright .footer-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px;
+}
+
+.copyright span {
+  text-align: center;
+}
+
+@media only screen and (max-width: 700px) {
+  .footer .footer-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .banner-logo {
+    justify-content: center;
+  }
+  .introduce-website,
+  .support-website {
+    max-width: 100%;
+  }
+  .support-website {
+    margin-top: 20px;
+    margin-left: 0px;
+  }
+  .footer .contact {
+    flex-direction: row;
+    margin-top: 20px;
+  }
+  .footer .contact-me {
+    justify-content: normal;
+    margin-top: 0px;
+    margin-left: 100px;
+  }
+  .about-website {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .footer .contact {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .footer .contact-me {
+    margin-top: 20px;
+    margin-left: 0px;
+  }
+}
+
+.logo {
+  /* background-image: linear-gradient( -90deg, #231557 0%, #44107a 29%, #ff1361 67%, #ffc400 80%, #ff5100 100%); */
+  background-image: linear-gradient(
+    90deg,
+    #230d72,
+    #44107a,
+    #ff1361,
+    #ffc400,
+    #ff5100,
+    #231557
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 3s linear infinite;
+  display: inline-block;
+  font-family: 'Lobster', cursive;
+  font-weight: 200;
+}
+
+@keyframes textclip {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: 200% center;
+  }
+}

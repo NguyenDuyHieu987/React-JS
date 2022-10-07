@@ -1,0 +1,136 @@
+.following {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  column-gap: 10px;
+  margin-top: 20px;
+}
+
+/* main content */
+
+.following .following-main-content {
+  width: 71%;
+  background: none;
+}
+
+.following-main-content {
+  display: block;
+  position: relative;
+}
+
+.following-main-content .main-movies-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remove-all {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px;
+  background: linear-gradient(to right, #00ffbf, #005485);
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.remove-all > span {
+  text-decoration: none;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 25px;
+  white-space: nowrap;
+  background-color: #091724;
+  font-size: 14px;
+  transition: all 0.5s ease-in-out;
+}
+
+.remove-all > span .fa-trash-can {
+  margin-right: 3px;
+}
+
+.remove-all:hover {
+  background: linear-gradient(to right, #ff008c, #ff0000);
+}
+
+.remove-all:hover span {
+  color: #c9003c;
+}
+
+.following-main-content .main-movies {
+  padding: 10px;
+  //   background-color: #091724;
+  background-color: black;
+}
+
+.following-main-content .main-movies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 190px));
+  margin-top: 10px;
+  gap: 10px;
+  //   background-color: #091724;
+  background-color: black;
+}
+
+/* history watched */
+
+.history-watched {
+}
+
+.history-watched-main-movies {
+  padding: 10px;
+  //   background-color: #091724;
+  background-color: black;
+  min-height: 100px;
+  margin-bottom: 10px;
+  width: 332px;
+  transition: all 0.3s ease;
+}
+
+.main-movies-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history-watched-container .rightside-movies-container.day,
+.history-watched-container .rightside-movies-container.week,
+.history-watched-container .rightside-movies-container.month,
+.history-watched-container .rightside-movies-container.all {
+  max-height: 650px;
+  overflow-y: scroll;
+}
+
+.history-watched-main-movies .main-movies-title .fa-clock-rotate-left {
+  color: rgb(226, 34, 0);
+  margin-right: 10px;
+}
+
+.history-watched-body {
+  margin-top: 20px;
+  max-height: 360px;
+  overflow-y: scroll;
+}
+
+@media only screen and (max-width: 1100px) {
+  .history-watched-main-movies {
+    width: 282px;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .following {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .following .following-main-content {
+    width: 100%;
+  }
+  .history-watched-main-movies {
+    width: 100% !important;
+  }
+}

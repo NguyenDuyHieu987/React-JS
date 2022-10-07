@@ -1,0 +1,109 @@
+.interaction {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 10px 10px 5px 0px;
+}
+
+.share-btns {
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 360px) {
+  .interaction {
+    display: block !important;
+  }
+  .like-share {
+    margin-left: 0px !important;
+    margin-top: 10px !important;
+  }
+}
+
+.rating {
+  cursor: pointer;
+  white-space: nowrap;
+  margin-top: 10px;
+}
+
+.rating .fa-star {
+  color: white;
+  font-size: 18px;
+}
+.rating span {
+  margin-left: 10px;
+}
+.rating .fa-star.active {
+  color: #ffbb00;
+}
+
+.rating .fa-star + .fa-star {
+  margin-left: 3px;
+}
+
+.rate-success {
+  user-select: none;
+  cursor: pointer;
+  opacity: 0;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  bottom: -60px;
+  height: 60px;
+  width: 230px;
+  background-color: rgb(0, 201, 90, 0.6);
+  border-radius: 5px;
+  box-shadow: 0px 6px 7px 3px rgb(0, 7, 19);
+  transition: all 0.7s ease;
+  &:hover {
+    transition: all 0.1s ease;
+    background-color: rgb(0, 201, 90);
+  }
+}
+
+.rate-success svg {
+  font-size: 20px;
+}
+.rate-success.active {
+  opacity: 1;
+  transition: all 0.7s ease;
+}
+
+.rate-success span {
+  color: white;
+  margin-left: 10px;
+}
+
+.interaction .like-share {
+  white-space: nowrap;
+}
+.interaction .like-share svg {
+  margin-right: 5px;
+}
+.interaction button + button {
+  margin-left: 5px;
+}
+
+.interaction button {
+  white-space: nowrap;
+  cursor: pointer;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  background-color: #006097;
+  padding: 5px 10px;
+}
+
+.interaction button:hover {
+  transition: all 0.3s ease;
+  background-color: #009e69;
+}
+
+.interaction .like-share .fa-thumbs-up.active {
+  color: #0050e4;
+}
+
+.hint-rate {
+  user-select: none;
+}

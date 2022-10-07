@@ -1,0 +1,78 @@
+.comments {
+  padding: 5px;
+  margin-top: 20px;
+  background-color: rgb(0, 11, 30);
+}
+
+.comment-title {
+  position: relative;
+  border-bottom: 1px solid #3a3a3a;
+  padding: 5px;
+  padding-bottom: 20px;
+  color: white;
+}
+
+.sort-comment {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.sort-comment .select-sort {
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(182, 182, 182);
+}
+
+.conmments-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.conmments-container img {
+  height: 40px;
+  width: 40px;
+}
+
+.conmments-container .text-comment {
+  font-size: 16px;
+  margin-left: 10px;
+  flex-grow: 1;
+  padding-left: 10px;
+  padding-top: 10px;
+  background: none;
+  outline: none;
+}
+
+.conmments-container textarea:focus .post-comment {
+  display: block;
+}
+
+.conmments-container .post-comment {
+  display: block;
+  cursor: pointer;
+  border: none;
+  padding: 0px 10px;
+  height: 70px;
+  color: white;
+}
+
+.conmments-container .post-comment[disabled] {
+  background-color: rgb(65, 65, 65);
+}
+
+.conmments-container .post-comment:not([disabled]) {
+  background-color: rgb(59, 108, 172);
+}
+
+.conmments-container .post-comment:not([disabled]):hover {
+  background-color: rgb(24, 100, 199);
+}
+
+.post-comment.active {
+  display: block;
+}

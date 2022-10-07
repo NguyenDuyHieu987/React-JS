@@ -1,0 +1,128 @@
+.trailer-content-items {
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-right: -10px;
+  margin-left: -10px;
+  padding: 10px 0px 0px 10px;
+  background-color: #091724;
+}
+
+@media only screen and (max-width: 1100px) {
+  .trailer-item.large {
+    width: 66.66666666666667% !important;
+  }
+  .trailer-item {
+    width: 33.33333333333333% !important;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .trailer-item.large {
+    width: 100% !important;
+  }
+  .trailer-item {
+    width: 50% !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .trailer-item.large .trailer-thumbnail img.trailer-poster {
+    height: 250px !important;
+  }
+  .trailer-thumbnail img.trailer-poster {
+    height: 135px !important;
+  }
+}
+
+.trailer-item.large {
+  width: 50%;
+  overflow: hidden;
+  float: left;
+}
+
+.trailer-item {
+  position: relative;
+  float: right;
+  overflow: hidden;
+  width: 25%;
+}
+
+.trailer-item.large .trailer-thumbnail img.trailer-poster {
+  display: block;
+  object-fit: cover;
+  height: 300px;
+  transition: all 0.5s ease;
+}
+
+.trailer-thumbnail img.trailer-poster {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+
+.trailer-thumbnail {
+  position: relative;
+  display: flex;
+  text-decoration: none;
+  user-select: none;
+  cursor: pointer;
+  color: white;
+  align-items: center;
+  overflow: hidden;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.trailer-item:not(.large) .img-play img {
+  width: 42px;
+}
+
+.trailer-thumbnail .img-play img {
+  opacity: 0.5;
+}
+
+.trailer-thumbnail:hover img.trailer-poster {
+  transform: scale(1.2);
+  opacity: 0.7;
+}
+
+.trailer-thumbnail .img-play img:hover {
+  transition: all 0.3s ease;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.img-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.trailer-item-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 7px 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.trailer-item-info .title-film {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.trailer-item-info .title-film:hover {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 0, 0),
+    rgb(124, 0, 25),
+    rgb(255, 0, 0)
+  );
+}

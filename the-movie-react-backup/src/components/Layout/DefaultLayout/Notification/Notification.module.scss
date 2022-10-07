@@ -1,0 +1,26 @@
+.notify {
+  position: relative;
+  padding: 10px;
+  padding-left: 50px;
+  border: 1px solid rgb(28, 100, 159);
+  background-color: #000a0e;
+  margin-top: 10px;
+}
+
+.icon-notify {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 40px;
+  background-color: rgb(28, 100, 159);
+  color: rgb(233, 14, 14);
+  font-size: 25px;
+}
+
+.notify-content {
+  color: rgb(230, 88, 18);
+}

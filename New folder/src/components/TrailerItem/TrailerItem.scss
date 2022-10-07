@@ -1,0 +1,20 @@
+.trailer-item:not(.large) .lazy-load-image-background {
+  height: 145px !important;
+}
+.trailer-item:first-child .lazy-load-image-background {
+  height: 300px !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .trailer-item:first-child .lazy-load-image-background {
+    height: 250px !important;
+  }
+  .trailer-item:not(.large) .lazy-load-image-background {
+    height: 135px !important;
+  }
+}
+
+.lazy-load-image-background {
+  display: block !important;
+  width: 100%;
+}
