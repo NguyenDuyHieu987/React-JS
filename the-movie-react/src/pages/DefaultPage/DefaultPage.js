@@ -20,6 +20,7 @@ import {
   getMovieSeries,
   getPopular,
   getMovies,
+  getDaTaSearch,
 } from '../../Services/MovieService';
 import styles from './DefaultPage.module.scss';
 import { useParams, useSearchParams } from 'react-router-dom';
@@ -98,18 +99,7 @@ function DefaultPage() {
       }
 
       if (movieName) {
-        await axios
-          .get(
-            // `https://api.themoviedb.org/3/search/multi?api_key=fe1b70d9265fdb22caa86dca918116eb&query=${movieName.replace(
-            //   '-',
-            //   ' '
-            // )}`
-
-            `http://localhost:3001/search/multi?api=hieu987&query=${movieName.replace(
-              '-',
-              ' '
-            )}&page=${page1}`
-          )
+        getDaTaSearch(movieName.replace('-', ' '), page1)
           .then((searchMovieResponse) => {
             setData(searchMovieResponse.data.results);
           })

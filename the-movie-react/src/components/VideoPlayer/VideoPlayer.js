@@ -418,7 +418,7 @@ function VideoPlayer({ movieid, tap, isEpisodes, data }) {
     video_player.oncontextmenu = (e) => {
       e.preventDefault();
     };
-  }, [isEpisodes]);
+  }, [isEpisodes || tap]);
 
   useEffect(() => {
     const video_player = document.querySelector('#video-player');

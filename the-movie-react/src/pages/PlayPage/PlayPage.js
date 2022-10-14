@@ -142,7 +142,7 @@ function PlayPage() {
   if (isEpisodes) {
     const episode = document.querySelectorAll('.episodes-list .episode');
     const btn_autoNetx_episode = document.querySelector(
-      '.' + cx('btn-autoNetx-episode')
+      '.' + cx('btn-autoNext-episode')
     );
 
     const mainVideo = document.querySelector('#main-video');
@@ -159,7 +159,7 @@ function PlayPage() {
           .setAttribute(
             'src',
             require(`../../constants/Videos/televisons_film/The_Witcher_S1_Ep${
-              i + 1
+              i < 8 ? i + 1 : 8
             }.mp4`)
           );
         mainVideo.load();
@@ -232,7 +232,7 @@ function PlayPage() {
       '.' + cx('btn-toggle-light')
     );
     const btn_autoNetx_episode = document.querySelector(
-      '.' + cx('btn-autoNetx-episode')
+      '.' + cx('btn-autoNext-episode')
     );
     const background_movie_light_off = document.querySelector(
       '.' + cx('background-movie-light-off')
@@ -321,7 +321,7 @@ function PlayPage() {
 
                 <li className={cx('autoNext-episode')}>
                   <span>Tự chuyển tập</span>
-                  <div className={cx('btn-autoNetx-episode')}></div>
+                  <div className={cx('btn-autoNext-episode')}></div>
                 </li>
               </ul>
             </div>

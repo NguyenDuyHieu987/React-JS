@@ -305,7 +305,9 @@ function SingIn({
       ],
     });
   }, []);
-  const responseFacebook = (response) => {};
+  const responseFacebook = (response) => {
+    console.log(response);
+  };
   return (
     <div
       className={cx('model-sign', {
@@ -331,7 +333,7 @@ function SingIn({
             <h2>Sign In</h2>
 
             <div className={cx('form-input')}>
-              <label for="group-input-email-signin">Email</label>
+              <label htmlFor="group-input-email-signin">Email</label>
               <div className={cx('sign-wrapper')}>
                 {/* <i className={cx('fa-regular fa-at')}></i> */}
                 <FontAwesomeIcon className={cx('fa-at')} icon={faAt} />
@@ -346,7 +348,7 @@ function SingIn({
             </div>
 
             <div className={cx('form-input')}>
-              <label for="group-input-password-signin">Mật khẩu</label>
+              <label htmlFor="group-input-password-signin">Mật khẩu</label>
               <div className={cx('sign-wrapper')}>
                 {/* <i className={cx('fa-solid fa-lock')}></i> */}
                 <FontAwesomeIcon className={cx('fa-lock')} icon={faLock} />
@@ -441,7 +443,7 @@ function SingIn({
             <h2>Sign Up</h2>
 
             <div className={cx('form-input')}>
-              <label for="group-input-username">Tên đầy đủ</label>
+              <label htmlFor="group-input-username">Tên đầy đủ</label>
               <div className={cx('sign-wrapper')}>
                 {/* <i className={cx('fa-regular fa-user')}></i> */}
                 <FontAwesomeIcon className={cx('fa-user')} icon={faUser} />
@@ -450,13 +452,14 @@ function SingIn({
                   className={cx('group-input-username')}
                   id="group-input-username"
                   placeholder="Nhập tên đầy đủ"
+                  name="username"
                 />
               </div>
               <span className={cx('form-message')}></span>
             </div>
 
             <div className={cx('form-input')}>
-              <label for="group-input-email-signup">Email</label>
+              <label htmlFor="group-input-email-signup">Email</label>
               <div className={cx('sign-wrapper')}>
                 {/* <i className={cx('fa-regular fa-at')}></i> */}
                 <FontAwesomeIcon className={cx('fa-at')} icon={faAt} />
@@ -471,7 +474,7 @@ function SingIn({
             </div>
 
             <div className={cx('form-input')}>
-              <label for="group-input-password-signup">Mật khẩu</label>
+              <label htmlFor="group-input-password-signup">Mật khẩu</label>
               <div className={cx('sign-wrapper')}>
                 {/* <i className={cx('fa-solid fa-lock')}></i> */}
                 <FontAwesomeIcon className={cx('fa-lock')} icon={faLock} />
@@ -501,7 +504,7 @@ function SingIn({
             </div>
 
             <div className={cx('form-input')}>
-              <label for="group-retype-input-password-signup">
+              <label htmlFor="group-retype-input-password-signup">
                 Nhập lại mật khẩu
               </label>
               <div className={cx('sign-wrapper')}>

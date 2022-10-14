@@ -120,7 +120,7 @@
   white-space: nowrap;
 }
 
-.btn-autoNetx-episode {
+.btn-autoNext-episode {
   position: relative;
   height: 30px;
   width: 66px;
@@ -130,7 +130,7 @@
   background-color: rgb(65, 65, 65);
 }
 
-.btn-autoNetx-episode::before {
+.btn-autoNext-episode::before {
   content: 'On';
   position: absolute;
   line-height: 30px;
@@ -143,7 +143,7 @@
   cursor: pointer;
 }
 
-.btn-autoNetx-episode::after {
+.btn-autoNext-episode::after {
   content: 'Off';
   position: absolute;
   height: 30px;
@@ -160,16 +160,16 @@
   transition: all 0.3s ease;
 }
 
-.btn-autoNetx-episode.active {
+.btn-autoNext-episode.active {
   background-color: #eb3349;
 }
 
-.btn-autoNetx-episode.active::before {
+.btn-autoNext-episode.active::before {
   content: 'Off';
   transform: translate(-33px, -50%);
 }
 
-.btn-autoNetx-episode.active::after {
+.btn-autoNext-episode.active::after {
   content: 'On';
   transform: translate(37px, -50%);
   color: #eb3349;

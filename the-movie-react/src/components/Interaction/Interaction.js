@@ -162,6 +162,7 @@ function Interaction({
         appId: '820070179113499',
         cookie: true,
         xfbml: true,
+        status: true,
         version: 'v15.0',
       });
       window.FB.AppEvents.logPageView();
@@ -183,24 +184,29 @@ function Interaction({
   useEffect(() => {
     initFacebookSDK();
 
-    document.getElementById('fb-share-button').onclick = function (e) {
-      window.FB.ui(
-        {
-          method: 'share_open_graph',
-          action_type: 'og.shares',
-          display: 'popup',
-          name: 'This is the content of the "name" field.',
-          link: currentURL,
-          href: currentURL,
-          picture: getPoster(data.backdrop_path),
-          caption: 'Top 3 reasons why you should care about your finance',
-          description:
-            "What happens when you don't take care of your finances? Just look at our country -- you spend irresponsibly, get in debt up to your eyeballs, and stress about how you're going to make ends meet. The difference is that you don't have a glut of taxpayers…",
-          message: '',
-        },
-        function (response) {}
-      );
-    };
+    // document.getElementById('fb-share-button').onclick = function (e) {
+    //   window.FB.ui(
+    //     {
+    //       method: 'share',
+    //       display: 'popup',
+    //       name: 'This is the content of the "name" field.',
+    //       link: currentURL,
+    //       href: currentURL,
+    //       picture: getPoster(data?.backdrop_path),
+    //       caption: 'Top 3 reasons why you should care about your finance',
+    //       description:
+    //         "What happens when you don't take care of your finances? Just look at our country -- you spend irresponsibly, get in debt up to your eyeballs, and stress about how you're going to make ends meet. The difference is that you don't have a glut of taxpayers…",
+    //       message: '',
+    //     },
+    //     function (response) {
+    //       if (response && !response.error_message) {
+    //         alert('Posting completed.');
+    //       } else {
+    //         alert('Error while posting.');
+    //       }
+    //     }
+    //   );
+    // };
   });
 
   return (
@@ -227,7 +233,7 @@ function Interaction({
         <div className={cx('fb-share-btn')}>
           <div
             id="fb-share-button"
-            class="fb-like"
+            className="fb-like"
             data-href={currentURL}
             data-width=""
             data-layout="button_count"
@@ -238,7 +244,7 @@ function Interaction({
 
           {/* <div
             id="fb-share-button"
-            class="fb-share-button"
+            className="fb-share-button"
             data-href={currentURL}
             data-layout="button_count"
             data-size="small"
@@ -246,7 +252,7 @@ function Interaction({
             <a
               target="_blank"
               href={`https://www.facebook.com/sharer/sharer.php?u=${currentURL}`}
-              class="fb-xfbml-parse-ignore"
+              className="fb-xfbml-parse-ignore"
             >
               Chia sẻ
             </a>

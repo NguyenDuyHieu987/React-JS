@@ -8,8 +8,8 @@ const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
 const TMDB_IMAGE_BASE_URL = 'https://image.tmdb.org/t/p';
 const YOUTUBE_BASE_URL = 'https://www.youtube.com/watch';
 
-const URL_API = 'https://the-movie-node.onrender.com';
-// const URL_API = 'http://localhost:3001';
+// const URL_API = 'https://the-movie-node.onrender.com';
+const URL_API = 'http://localhost:3001';
 
 const getYear = async (id) =>
   await axios.get(
@@ -51,9 +51,15 @@ const getPopular = async (page) =>
 const getTopRated = async (page) =>
   await axios.get(`${URL_API}/movie/toprated?api=hieu987&page=${page}`);
 
-const getDaTaSearch = async (text) => {
+// const getDaTaSearch = async (text) => {
+//   await axios.get(
+//     `https://api.themoviedb.org/3/search/multi?api_key=fe1b70d9265fdb22caa86dca918116eb&query=${text}`
+//   );
+// };
+
+const getDaTaSearch = async (text, page) => {
   await axios.get(
-    `https://api.themoviedb.org/3/search/multi?api_key=fe1b70d9265fdb22caa86dca918116eb&query=${text}`
+    `${URL_API}/search/multi?api=hieu987&query=${text}&page=${page}`
   );
 };
 
@@ -90,6 +96,7 @@ const getMoviesByGenres = async (genres_name, page) => {
       : `${URL_API}/discover/all?api=hieu987&with_genres=${genreStr}&page=${page}`
   );
 };
+
 // const getMoviesByYear = async (year, page) =>
 //   await axios.get(
 //     `https://api.themoviedb.org/3/discover/movie?api_key=fe1b70d9265fdb22caa86dca918116eb&primary_release_date.lte=${year}-12-30&primary_release_date.gte=${year}-01-01&page=${page}`

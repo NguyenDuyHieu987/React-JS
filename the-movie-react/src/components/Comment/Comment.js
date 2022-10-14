@@ -112,7 +112,7 @@ function Comment({ currentURL }) {
     //   </div>
     // </div>
     <div
-      class="fb-comments"
+      className="fb-comments"
       data-href={currentURL}
       data-width="100%"
       data-numposts="10"
